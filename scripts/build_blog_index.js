@@ -5,6 +5,8 @@ const fs = require('fs')
 const path = require('path')
 const util = require('util');
 
+const rootWebsite = 'https://nateplays95.github.io/portfolio'
+
 let htmlText = fs.readFileSync(path.join(__dirname, '/../index.html'), 'utf8')
 //console.log(util.inspect(htmlText))
 
@@ -50,7 +52,7 @@ files.forEach(file => {
                 <div class="mini-post-inner">
                     ${contents}
                 </div>
-                <a href="./pages/${htmlName}">Read more</a>
+                <a href="${rootWebsite}/pages/${htmlName}">Read more</a>
             </div>`)
     
     let tempHtml = cheerio.load(postTemplateHtml)
