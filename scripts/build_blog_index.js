@@ -1,3 +1,5 @@
+//node build.js
+
 const http = require('http')
 const fs = require('fs')
 const path = require('path')
@@ -23,6 +25,11 @@ let pagesPath = path.join(__dirname, '/../pages')
 let postTemplateHtml = fs.readFileSync(pagesPath + '/' + '_blog-template.html', 'utf8')
 
 let fileNames = fs.readdirSync(blogPath)
+fileNames = fileNames.filter(function(fileName) {
+    if (fileName.endsWith('.txt')) return true;
+    return false; 
+})
+console.log(fileNames)
 let files = fileNames.map(function (fileName) {
     return {
     name: fileName,
@@ -58,3 +65,4 @@ let finalText = $.html();
 
 // console.log(finalText)
 fs.writeFileSync(path.join(__dirname, '../index.html'), finalText);
+// fs.writeFileSync(path.join(__dirname, 'teste2.html'), finalText);

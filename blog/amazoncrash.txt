@@ -1,0 +1,28 @@
+<h2>Prototype - Amazon Crash</h2>
+<iframe
+  frameborder="0"
+
+  title="Youtube Video"
+  style=" height:'auto'; width='100%'; aspect-ratio:16/9;"
+  width="100%"
+  src="https://www.youtube.com/embed/indFQUKboBA"
+></iframe>
+<br><br>
+
+This is a prototype for a 2D action game made in a couple of weeks. Me and a friend wanted to make it a sort of boss-rush game with different enemies as an opportunity to learn about godot, but we sadly moved onto other projects after a while.
+<br><br>
+<img src="../blog/images/amazoncrash1.png" height="200">
+<br><br>
+I set up the different boss attacks and behaviors using a single State Machine, mostly taken from
+
+<a href="https://youtu.be/DPxIMVC0oZA?si=y6ej0BWiNehVBvVC"> this video. </a>
+Transitions from state to state could be triggered by conditions specific to each boss, like their health total, or their line of sight to the player, or internal timers.
+
+<br><br>
+<img src="../blog/images/amazoncrash2.png" height="300">
+<br><br>
+Each player attack is also handled with those same state machines, not unlike character action games. I thought making transitions between states could lead to some sort of "combo strings" using just two attack buttons. So, each attack state is tied to an animation that also sets which frames you can roll-cancel and which frames you can input to start another attack, and if an input is triggered when the roll-cancel boolean is active, the player transitions to the Roll state and so on.
+<br><br>
+<img src="../blog/images/amazoncrash3.jpg" height="300"><br>Average weapon flowchart from Monster Hunter
+<br><br>
+In the end, it has a decent and modular system for action games with combo strings, like you see in the Monster Hunter games with their complex weapon movesets. There's room to use multiple state machines for various parts of a character's moveset, and combined with some system to buffer inputs it could be very powerful.

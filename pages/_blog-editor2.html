@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natan Maia</title>
+    <link rel="stylesheet" href="../style.css">
+
+  </head>
+  
+  <body>  
+    <div style="height: 100px"></div>
+  
+    <div id="frame-main" class="frame">
+      <button id="btn-change-mode" class="button btn-menu" style="background-color: #fee440"
+        onclick="changeMode()"> Edit/Preview
+      </button>
+      <button id="btn-save-file" class="button btn-menu" style="background-color: 'green'"
+        onclick="savePost()"> Save Post
+      </button>
+      <br>
+      <div style="height:32pt"></div>
+      <div id="area-filename" contentEditable="true" style="border-width: 2pt; border-style: outset; border-color: darkgoldenrod; margin-top: 32pt;">filename</div>
+      <div style="height:5pt"></div>
+      <div id="area-edit" contentEditable="true" style="border-width: 2pt; border-style: outset; border-color: darkgoldenrod; margin-top: 32pt;"></div>
+      <div id="area-preview" style="border-width: 2pt; border-style: outset; border-color: darkgoldenrod; margin-top: 32pt;"></div>
+      
+      
+      
+    </div>
+ 
+    <script src="_blog-editor2.js"></script>
+</body>
+</html>
