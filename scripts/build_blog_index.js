@@ -50,7 +50,7 @@ files.forEach(file => {
                 <div class="mini-post-inner">
                     ${contents}
                 </div>
-                <a href="../pages/${htmlName}">Read more</a>
+                <a href="./pages/${htmlName}">Read more</a>
             </div>`)
     
     let tempHtml = cheerio.load(postTemplateHtml)
