@@ -10,18 +10,24 @@
 
 This is a prototype for a 2D action game made in a couple of weeks. Me and a friend wanted to make it a sort of boss-rush game with different enemies as an opportunity to learn about godot, but we sadly moved onto other projects after a while.
 <br><br>
-<img src="../blog/images/amazoncrash1.png" height="200">
-<br><br>
-I set up the different boss attacks and behaviors using a single State Machine, mostly taken from
+
+When thinking about what an action game needs first and foremost, I think movement and actionsets. For enemies, I control their attacks and behaviors using a single State Machine, mostly taken from
 
 <a href="https://youtu.be/DPxIMVC0oZA?si=y6ej0BWiNehVBvVC"> this video. </a>
-Transitions from state to state could be triggered by conditions specific to each boss, like their health total, or their line of sight to the player, or internal timers.
-
+Transitions from state to state could be triggered by conditions specific to each enemy, like their health total, or their line of sight to the player, or internal timers.
 <br><br>
-<img src="../blog/images/amazoncrash2.png" height="300">
+<img src="../blog/images/amazoncrash1.png" height="200">
+<br>Your average state machine, with child states.
 <br><br>
 Each player attack is also handled with those same state machines, not unlike character action games. I thought making transitions between states could lead to some sort of "combo strings" using just two attack buttons. So, each attack state is tied to an animation that also sets which frames you can roll-cancel and which frames you can input to start another attack, and if an input is triggered when the roll-cancel boolean is active, the player transitions to the Roll state and so on.
 <br><br>
+<img src="../blog/images/amazoncrash2.png" height="300">
+<br>Animations handle moving hitboxes and i-frames.
+<br><br>
+In the end, it has a decent and modular system for action games with combo strings, like you see in the Monster Hunter games with their complex weapon movesets. I had three different weapons in the demo, a sword, a spear and a bow. Sword and Spear attacks could weave into each other, while the bow had an entirely separate flow. There's room to use multiple state machines for various parts of a character's moveset, and combined with some system to buffer inputs it could be very powerful.
+<br><br>
 <img src="../blog/images/amazoncrash3.jpg" height="300"><br>Average weapon flowchart from Monster Hunter
 <br><br>
-In the end, it has a decent and modular system for action games with combo strings, like you see in the Monster Hunter games with their complex weapon movesets. There's room to use multiple state machines for various parts of a character's moveset, and combined with some system to buffer inputs it could be very powerful.
+The
+<a href="https://github.com/NatePlays95/Amazon-Crash"> Github repo </a>
+is public if you want to check it out. I would love to find an excuse to use this in an actual project soon.
