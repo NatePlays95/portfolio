@@ -180,7 +180,7 @@ small {
   font-size: smaller;
   margin: 16px;
   padding: 0px 16px;
-  height: 300px;
+  height: 350px;
   width: 300px;
   object-fit:contain;
 }
@@ -204,7 +204,7 @@ small {
 
 .mini-post-inner {
   overflow: hidden;
-  height: 270px;
+  height: 320px;
   --mask: linear-gradient(to bottom, 
     rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 80%, 
     rgba(0,0,0, 0) 99%, rgba(0, 0, 0, 0) 0
@@ -361,4 +361,10 @@ small {
   margin: 4pt;
   border-radius: 2pt;
   display:block;
+}
+
+iframe {
+  height:'auto'; 
+  width:'100%'; 
+  aspect-ratio:16/9;
 }

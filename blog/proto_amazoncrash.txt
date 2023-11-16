@@ -1,25 +1,14 @@
-<!DOCTYPE html><html lang="en"><head>  
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natan Maia</title>
-    <link rel="stylesheet" href="../style.css">
-  </head>
-  
-  <body>  
-    <div style="height: 100px"></div>
-  
-    <div id="frame-main" class="frame">
-      <button id="btn-return" class="button btn-menu" style="background-color: #fee440" onclick="window.open('../index.html', '_self')"> Back
-      </button>
-      <br>
+<h2>Prototype - Amazon Crash</h2>
+<iframe
+  frameborder="0"
 
-      
-    <div><h2>Prototype - Amazon Crash</h2>
-<iframe  ="" frameborder="0" title="Youtube Video" style=" height:'auto'; width='100%'; aspect-ratio:16/9;" width="100%" src="https://www.youtube.com/embed/indFQUKboBA"></iframe>
+  title="Youtube Video"
+  width="100%"
+  src="https://www.youtube.com/embed/indFQUKboBA"
+></iframe>
 <br><br>
 
-This is a prototype for a 2D action game made in a couple of weeks.&nbsp;Me and a friend wanted to make it a sort of boss-rush game with different enemies as an opportunity to learn about godot, but we sadly moved onto other projects after a while.
+This is a prototype for a 2D action game made in a couple of weeks. Me and a friend wanted to make it a sort of boss-rush game with different enemies as an opportunity to learn about godot, but we sadly moved onto other projects after a while.
 <br><br>
 <img src="../blog/images/amazoncrash1.png" height="200">
 <br><br>
@@ -36,8 +25,3 @@ Each player attack is also handled with those same state machines, not unlike ch
 <img src="../blog/images/amazoncrash3.jpg" height="300"><br>Average weapon flowchart from Monster Hunter
 <br><br>
 In the end, it has a decent and modular system for action games with combo strings, like you see in the Monster Hunter games with their complex weapon movesets. There's room to use multiple state machines for various parts of a character's moveset, and combined with some system to buffer inputs it could be very powerful.
-</div></div>
- 
-    <script src="_blog-post.js"></script>
-
-</body></html>
